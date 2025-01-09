@@ -17,7 +17,7 @@
   - 24.06.11 - 24.06.18 ( 7일 )
 - 개발 환경:
 
-    | iOS version | <img src="https://img.shields.io/badge/iOS-16.0+-black?logo=apple"/> |
+    | iOS version | <img src="https://img.shields.io/badge/iOS-15.0+-black?logo=apple"/> |
     |:-:|:-:|
     | Framework | UIKit |
     | Architecture | MVVM |
@@ -28,7 +28,7 @@
 ## 기술 스택 및 라이브러리
 - UI: `SnapKit`, `Toast`
 - Network: `URLSession`, `Kingfisher`, `Reachability`
-- Database: `Realm`
+- Database: `CoreData`
 
 <br/>
 
@@ -70,9 +70,9 @@
  
 <br>
 
-- ### Realm
-  - 좋아요한 상품을 Realm 테이블에 저장
-  - realmRepository 패턴을 사용해서 데이터 저장/삭제/조회 기능을 매번 생성해주지 않고 하나의 클래스에서 관리
+- ### Compositional Layout, Diffable DataSource
+  - 홈 화면에서 신발 브랜드 종류, 신발 정보, 신상 신발 등 섹션별로 다른 셀 크기와 데이터 타입을 효과적으로 처리하기 위해 Compositional Layout과 Diffable DataSource를 활용하여 레이아웃을 구성
+  - NSDiffableDataSourceSnapshot을 사용해 섹션별로 데이터를 추가하고, CellRegistration을 사용하여 셀의 데이터 타입에 맞는 레이아웃을 설정
 
 <br/>
 
