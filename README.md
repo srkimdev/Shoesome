@@ -47,8 +47,9 @@
 ## 핵심 기술 구현 사항
 
 - ### Custom Observable
-  - 반응형 프로그래밍을 1st party에서 구현하기 위해 RxSwift에 있는 Observable을 커스텀하여 사용
-  - ViewModel에 검색어나 좋아요 버튼과 같은 이벤트를 Observable 객체를 생성하여 받고 구독한 결과를 다시 Observable 객체로 반환하여 ViewController에게 넘겨줌
+  - 외부 라이브러리에 대한 의존성을 최소화하기 위해 RxSwift의 Observable을 참고하여 직접 커스텀한 Observable 형태를 설계
+  - 여러 타입의 데이터를 감시할 수 있도록 내부의 value값을 제네릭으로 정의
+  - didSet을 이용하여 value값이 변경될 때마다 등록한 closure함수가 실행
   
 <br>
 
